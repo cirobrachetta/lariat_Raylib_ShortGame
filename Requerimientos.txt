@@ -1,0 +1,59 @@
+Dominio: 
+
+	Raylib
+	
+	C++
+
+	2D
+
+Funcionales:
+
+	El juego implementara un "ta te ti" o "tres en raya"
+
+	El jugador controlara una pequeña entidad que solo podrá moverse por su mitad de la pantalla
+	
+	El jugador podrá disparar a la grilla del "tres en raya" para ponerle su marca
+	
+	Se implementara un bot que "jugara" en la otra mitad de la pantalla con una entidad idéntica a la del jugador
+
+	El bot tendrá el objetivo de vencer al jugador en el "tres en raya"
+	
+	El jugador podrá sobre escribir las marcas de el bot en la grilla del "tres en raya" y viceversa
+
+	La grilla del "tres en raya" se ubicara en el centro de la pantalla
+	
+	El jugador se moverá con las teclas WASD, apuntara con el ratón, y disparara con el click izquierdo
+
+	Las balas del jugador podrán rebotar en las paredes
+
+	Las balas del jugador podrán golpear la entidad del bot y viceversa
+
+	Cuando una entidad es golpeada por una bala esta estará inhabilitada por 3 segundos
+
+	El juego mostrara al jugador una linea punteada que indica hacia donde esta apuntando en cada momento
+
+	El bot tendrá una dificultad "media"
+
+	El bot disparara de forma intencionada a la entidad del jugador de forma aleatoria
+
+	Las balas deberán moverse ligeramente mas rápido que las entidades
+
+	Las balas de el jugador y del bot deberán tener distintos colores
+
+	En las partes Centro-Inferior y Centro-superior de la pantalla deberá haber "portales" con los colores de las balas de la entidad de el lado opuesto de la pantalla
+
+	Cuando una bala del mismo color que el portal lo golpea el portal marcara la casilla del centro de la grilla del "tres en raya" con la marca de la entidad que lo haya golpeado
+
+	Ganara la entidad que ponga tres de sus marcas en la grilla de forma lineal o diagonal
+
+	Las casillas de la grilla del "tres en raya" dividas en colores de forma que las tres casillas que quedan del lado de una entidad solo puedan ser marcadas por la entidad del lado contrario, mientras que las casillas de la linea central no tendrán restricción de color
+
+	Cada vez que el jugador o el bot sean golpeados por una bala enemiga perderán una vida
+
+	Tanto el jugador como el bot tendrán 5 vidas cada uno
+
+	El juego mostrara cuantas vidas le queda a cada uno en tiempo real
+
+	Al entrar al juego se le mostrara un menu al jugador con el titulo del juego, y las opciones "jugar" y "salir", las cuales servirán para empezar una partida o para salir del programa respectivamente
+
+	El jugador podrá volver al menu principal en cualquier momento presionando la tecla escape

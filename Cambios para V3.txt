@@ -1,0 +1,4 @@
+Las balas deberian chocarse y rebotar contra las casillas de la grilla que sean de el color contrario.
+
+El juego deberia de terminar, poniendo un cartel de victoria o derrota al jugador
+y dandole la opcion de cerrar el juego, volver al menu o reintentar.

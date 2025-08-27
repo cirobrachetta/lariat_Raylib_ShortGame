@@ -1,0 +1,14 @@
+La grilla del tic tac toe tiene que tener colicion de modo que ni el jugador ni el bot la puedan atravezar.
+
+Ni el jugador ni el bot estan pudiendo disparar.
+
+La linea punteada que le indica al jugador donde esta apuntando deberia tener una distancia maxima corta.
+
+Al estar en una partida y precionar escape el jugador deberia ser llevado de vuelta al menu, no cerrar el juego.
+
+El jugador deberia de disparar al dar click izquierdo en el raton, mientras que el bot deberia de disparar en base 
+a un intervalo variable de segundos de espera entre disparosel cual deberia variar entre (0.5 y 2).
+
+El objetivo del bot no debe ser apuntarle a el jugador sino ganar el tic tac toe al marcar tres casillas en linea o diagonal,
+aunque si debe de apuntarle al jugador cada cierto tiempo, lo cual se podria manejar con un intervalo variable que seleccione una cantidad "al azar"
+de disparos "normales" antes de hacer un disparo de nuevo al jugador. Dicho intervalo podria variar entre (2 y 5).
