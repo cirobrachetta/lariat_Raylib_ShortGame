@@ -17,6 +17,18 @@ void Bullet::Update(float dt) {
     if (position.y > Cfg::ScreenHeight - radius) { position.y = Cfg::ScreenHeight - radius; velocity.y *= -1; }
 }
 
+void Bullet::ReflectX() {
+    velocity.x *= -1;
+    bounceCount++;
+    if(bounceCount > maxBounces) Kill();
+}
+
+void Bullet::ReflectY() {
+    velocity.y *= -1;
+    bounceCount++;
+    if(bounceCount > maxBounces) Kill();
+}
+
 void Bullet::Draw() const {
     if (!alive) return;
     DrawCircleV(position, radius, tint);

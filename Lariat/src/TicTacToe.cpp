@@ -122,6 +122,11 @@ bool TicTacToe::GetStrategicCellWorldPos(Vector2 &outPos) const {
     return true;
 }
 
+int TicTacToe::GetRowFromIndex(int idx) const {
+    if (idx < 0 || idx >= 9) return -1;
+    return idx / 3; // 0=top, 1=middle, 2=bottom
+}
+
 void TicTacToe::Reset() {
     cells.fill(Mark::None);
 }

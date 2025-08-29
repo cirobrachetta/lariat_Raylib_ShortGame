@@ -7,27 +7,24 @@
  */
 class Bullet {
 public:
-    /** \brief Crea una bala con posición, velocidad, color e id de dueño.
-     *  \param pos Posición inicial.
-     *  \param vel Velocidad (px/s).
-     *  \param color Color de la bala.
-     *  \param ownerId 0 = jugador, 1 = bot.
-     */
     Bullet(Vector2 pos, Vector2 vel, Color color, int ownerId);
 
-    /** \brief Actualiza la posición y procesa rebotes en paredes. */
     void Update(float dt);
-
-    /** \brief Dibuja la bala. */
     void Draw() const;
 
-    /** \brief Getters y estado de vida. */
     float   Radius()   const { return radius; }
     Vector2 Position() const { return position; }
     int     OwnerId()  const { return ownerId; }
     Color   Tint()     const { return tint; }
     bool    IsAlive()  const { return alive; }
     void    Kill()           { alive = false; }
+
+    void ReflectX();
+    void ReflectY();
+
+    // ✅ Nuevos getters para rebotes
+    int  BounceCount() const { return bounceCount; }
+    int  MaxBounces()  const { return maxBounces; }
 
 private:
     Vector2 position;
@@ -36,4 +33,7 @@ private:
     Color   tint;
     int     ownerId;
     bool    alive;
+
+    int bounceCount{0};                  // contador de rebotes
+    static constexpr int maxBounces{3};  // máximo permitido
 };

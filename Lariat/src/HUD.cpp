@@ -21,6 +21,11 @@ void HUD::DrawBottom(const Entity& player) const {
     DrawText("ESC: Menu", Cfg::ScreenWidth - 120, Cfg::ScreenHeight - 24, 18, GRAY);
 }
 
+void HUD::DrawTextCentered(const char* text, int x, int y, int fontSize, Color color) const {
+    int textWidth = MeasureText(text, fontSize);
+    DrawText(text, x - textWidth/2, y, fontSize, color);
+}
+
 void HUD::DrawMenu() const {
     const char* title = Cfg::GameTitle.c_str();
     int tw = MeasureText(title, 42);

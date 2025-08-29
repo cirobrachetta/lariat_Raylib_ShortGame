@@ -10,6 +10,8 @@ class HUD {
 public:
     enum class Screen { Menu, Playing };
 
+    void DrawTextCentered(const char* text, int x, int y, int fontSize, Color color) const;
+
     HUD() = default;
 
     /** \brief Dibuja la banda superior: título, vidas del bot y ganador. */

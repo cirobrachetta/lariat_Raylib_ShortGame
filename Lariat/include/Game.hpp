@@ -18,9 +18,14 @@ public:
     void Run();
 
 private:
-    enum class State { Menu, Playing };
+    private:
+    enum class State { Menu, Playing, GameOver }; // agregamos GameOver
 
     State state{ State::Menu };
+
+    int gameOverSelection{ 0 }; // 0=Reintentar, 1=Volver al menú
+
+    void HandleGameOverMenu();
 
     // Punteros a entidades
     std::shared_ptr<Player> player;

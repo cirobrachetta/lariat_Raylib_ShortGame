@@ -28,5 +28,5 @@ namespace Cfg {
     inline const Color BotBulletColor     = ORANGE;
 
     // UI
-    inline const std::string GameTitle = "Tank TicTacToe";
+    inline const std::string GameTitle = "Lariat";
 }

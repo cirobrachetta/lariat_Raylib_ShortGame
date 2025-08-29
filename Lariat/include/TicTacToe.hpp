@@ -38,11 +38,20 @@ public:
     /** \brief Devuelve el rectángulo que ocupa la grilla en el mundo. */
     Rectangle GetBoardRect() const { return boardRect; }
 
+    int GetRowFromIndex(int idx) const;
+
+    Mark GetCell(int idx) const { return cells[idx]; }
+
+    float CellWidth()  const { return cellW; }
+    
+    float CellHeight() const { return cellH; }
+
+    int  PosToIndex(Vector2 p) const;
 private:
     Rectangle      boardRect;
     float          cellW, cellH;
     std::array<Mark,9> cells;
 
-    int  PosToIndex(Vector2 p) const;
+    
     bool RestrictionAllows(int idx, Mark who) const; ///< Fila superior: sólo Player; fila inferior: sólo Bot; fila media: libre.
 };
